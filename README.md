@@ -1,19 +1,23 @@
-# ARRProjet
+# MAC scheduler simulator
+this project is a school but I want to play with it and have fun.
 
-Activer python env
-On Windows, run:
-.venv\Scripts\activate.bat
+in this simulator I distinguish 2 kind of mobile **near** or **far**
+for distinguish I just look at distance between Antenna and Mobile.
 
-On Unix or MacOS, run:
-source .venv/bin/activate
+## MAC Scheduler implemented
 
+this simulator implements those scheduler:
+* MaxSNR
+* RoundRobin
 
+## parameters
 
-Simulateur d'allocation de ressource radio via l'étude du débit & du délaie en comparant un antennes qui émet à plein et plusieurs plus petite antennes à la place de la plus grande
+I need to fill it.
 
-intégré taff de mathieu (avec multipa) 
+## mkn generation 
 
-ajout de métrique:
-grouper par proche & loin
-taux d'utilisation UR.
-efficacité spectral (nombre de bit par bande)
+the mkn generation for mobile I ignore:
+* shadowing , for mobile of same groups it's the same
+* path-lost , for mobile of same groups it's the same
+
+I simulate multi-path fading with rayleigh random law 
