@@ -9,6 +9,7 @@ for distinguish I just look at distance between Antenna and Mobile.
 this simulator implements those scheduler:
 * MaxSNR
 * RoundRobin
+* pf work in progress 
 
 ## parameters
 
