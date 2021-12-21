@@ -1,22 +1,25 @@
 from random import random
 from random import randint
 import statistics
-import Packet
-import Simulateur as s
-import RoundRobin as m
-import MaxSNR as msnr
-import Scheduler as sch
+import pythonProject.Packet
+import pythonProject.Simulateur as s
+import pythonProject.RoundRobin as m
+import pythonProject.MaxSNR as msnr
+import pythonProject.Scheduler as sch
 class Antenne:
     @staticmethod
     def getScheduler(scheduler):
         classIndex = list(map(lambda x: x.__name__, sch.Scheduler.__subclasses__())).index(scheduler)
         return sch.Scheduler.__subclasses__()[classIndex]
 
-    def __init__(self, name=None, x1=None, y=None, scheduler='RoundRobin', nb_UR=s.NB_UR):
+    def __init__(self, name=None, x1=None, y=None, scheduler='RoundRobin', nb_UR=None):
         self.name = name
         self.x = x1
         self.y = y
-        self.nb_UR = nb_UR
+        if(self.nb_UR == None):
+            self.nb_UR = s.NB_UR
+        else:
+            self.nb_UR = nb_UR
         self.mobiles = []
         self.mknMoyen =None
         self.scheduler = Antenne.getScheduler(scheduler)()
@@ -64,10 +67,10 @@ class Antenne:
        # print(f"nombre de packets Moyen généré par mobile {s.NB_PACKET_PAR_MOBILE}")
         for m in self.mobiles:
             for x in range(randint(0 , s.NB_PACKET_PAR_MOBILE *2 )):
-                m.nouveauPacket(ticCourant)
+                m.createPacket(ticCourant)
         mobileParlant = list(filter(lambda x: x.buffer != [],self.mobiles))
         mobileMkn = {x : x.genereMknInstantane() for x in mobileParlant}#x.mknMoyen
-        tableauAffectation = self.scheduler.allocuteUR(mobileMkn, self.nb_UR)
+        tableauAffectation = self.scheduler.allocateUR(mobileMkn, self.nb_UR)
         self.addTauxUtilisationUR(tableauAffectation, ticCourant)
         self.addEfficaciteSpectral(tableauAffectation, ticCourant)
         for tuple in tableauAffectation:

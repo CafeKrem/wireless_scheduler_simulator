@@ -1,8 +1,8 @@
 from random import SystemRandom, randint
 
 import math
-import Simulateur as s
-import Packet as p
+import pythonProject.Simulateur as s
+import pythonProject.Packet as p
 from numpy import random
 
 
@@ -120,10 +120,8 @@ class Mobile:
         if(self.bitsNeeded < bitcosomer):
             print("klm")
         self.bitsNeeded -= bitcosomer
-    def nouveauPacket(self, ticCourant):
-        packet = p.Packet(self, ticCourant)
-        if(self.bitsNeeded < 0):
-            print('klm')
+    def createPacket(self, ticCourant,taillePacket=s.TAILLE_PACKET):
+        packet = p.Packet(self, ticCourant,taille=taillePacket)
         self.bitsNeeded += packet.taille
         self.buffer.append(packet)
 

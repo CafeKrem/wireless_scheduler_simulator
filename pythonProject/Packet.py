@@ -1,13 +1,17 @@
-import Simulateur
+import pythonProject.Simulateur
 
 
 class Packet:
 
-    def __init__(self,mobile,  tempsReelCourant:int,taille:int = Simulateur.TAILLE_PACKET  ):
+    def __init__(self,mobile,  tempsReelCourant:int,taille:int = None  ):
         self.tempsDepart = tempsReelCourant
         self.tempsArrivee = None
         self.tailleInitiale = taille
-        self.taille = taille
+
+        if( taille == None):
+            self.taille = pythonProject.Simulateur.TAILLE_PACKET
+        else:
+            self.taille = taille
         self.nom = mobile.name
         self.mobile = mobile
 

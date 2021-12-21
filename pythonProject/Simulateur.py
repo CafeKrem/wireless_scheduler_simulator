@@ -8,10 +8,10 @@ import logging
 
 
 if TYPE_CHECKING:
-    import Packet
+    import pythonProject.Antenne as a
+    import pythonProject.Mobile as m
 
-import Antenne as a
-import Mobile as m
+
 
 from datetime import datetime
 
