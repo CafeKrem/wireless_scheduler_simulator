@@ -1,4 +1,4 @@
-from pythonProject.Scheduler import Scheduler
+from wirelessNetworkSimulator.Scheduler import Scheduler
 
 class RoundRobin(Scheduler):
 

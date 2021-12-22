@@ -1,7 +1,7 @@
 from abc import abstractmethod
 from unittest import TestCase
-from pythonProject.Mobile import Mobile
-from pythonProject.Scheduler import Scheduler
+from wirelessNetworkSimulator.Mobile import Mobile
+from wirelessNetworkSimulator.Scheduler import Scheduler
 
 
 class TestScheduler(Scheduler, TestCase):

@@ -4,12 +4,12 @@ import os
 from typing import TYPE_CHECKING
 import logging
 
-# from pythonProject.Courbe import Courbe
+# from wirelessNetworkSimulator.Courbe import Courbe
 
 
 if TYPE_CHECKING:
-    import pythonProject.Antenne as a
-    import pythonProject.Mobile as m
+    import wirelessNetworkSimulator.Antenne as a
+    import wirelessNetworkSimulator.Mobile as m
 
 
 

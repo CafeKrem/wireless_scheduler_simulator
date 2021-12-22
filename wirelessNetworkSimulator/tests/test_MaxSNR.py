@@ -1,5 +1,5 @@
-from pythonProject.MaxSNR import MaxSNR
-from pythonProject.tests.test_Scheduler import TestScheduler
+from wirelessNetworkSimulator.MaxSNR import MaxSNR
+from wirelessNetworkSimulator.tests.test_Scheduler import TestScheduler
 
 class TestMaxSNR(TestScheduler):
 

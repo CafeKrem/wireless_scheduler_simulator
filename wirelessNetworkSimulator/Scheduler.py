@@ -2,7 +2,7 @@ import abc
 
 
 #@abc.abstractClass
-from pythonProject.Mobile import Mobile
+from wirelessNetworkSimulator.Mobile import Mobile
 
 
 class Scheduler:
