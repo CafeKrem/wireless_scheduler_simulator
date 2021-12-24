@@ -1,5 +1,5 @@
 import wirelessNetworkSimulator.tests.test_Scheduler as scheduler
-from wirelessNetworkSimulator.RoundRobin import RoundRobin
+from wirelessNetworkSimulator.core.scheduler.RoundRobin import RoundRobin
 
 
 class TestRoundRobin(scheduler.TestScheduler):

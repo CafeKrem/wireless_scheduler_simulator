@@ -1,4 +1,4 @@
-import wirelessNetworkSimulator.Simulateur
+import wirelessNetworkSimulator.core.Simulateur
 
 
 class Packet:
@@ -9,7 +9,7 @@ class Packet:
         self.tailleInitiale = taille
 
         if( taille == None):
-            self.taille = wirelessNetworkSimulator.Simulateur.TAILLE_PACKET
+            self.taille = wirelessNetworkSimulator.core.Simulateur.TAILLE_PACKET
         else:
             self.taille = taille
         self.nom = mobile.name

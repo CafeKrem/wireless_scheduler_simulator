@@ -1,5 +1,5 @@
 import wirelessNetworkSimulator.tests.test_Scheduler as scheduler
-from wirelessNetworkSimulator.pf import pf
+from wirelessNetworkSimulator.core.scheduler.pf import pf
 
 
 class Testpf(scheduler.TestScheduler):

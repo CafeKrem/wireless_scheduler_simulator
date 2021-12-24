@@ -1,4 +1,4 @@
-import wirelessNetworkSimulator.Scheduler as sch
+import wirelessNetworkSimulator.core.scheduler.Scheduler as sch
 
 class MaxSNR(sch.Scheduler):
 

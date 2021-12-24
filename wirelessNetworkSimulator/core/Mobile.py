@@ -1,8 +1,6 @@
-from random import SystemRandom, randint
-
 import math
-import wirelessNetworkSimulator.Simulateur as s
-import wirelessNetworkSimulator.Packet as p
+import wirelessNetworkSimulator.core.Simulateur as s
+import wirelessNetworkSimulator.core.Packet as p
 from numpy import random
 
 

@@ -1,5 +1,5 @@
-from wirelessNetworkSimulator.Scheduler import Scheduler
-from wirelessNetworkSimulator.Mobile import Mobile
+from wirelessNetworkSimulator.core.scheduler.Scheduler import Scheduler
+from wirelessNetworkSimulator.core.Mobile import Mobile
 from statistics import mean
 
 

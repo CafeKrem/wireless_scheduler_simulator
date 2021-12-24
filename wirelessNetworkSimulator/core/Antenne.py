@@ -1,11 +1,7 @@
-from random import random
 from random import randint
 import statistics
-import wirelessNetworkSimulator.Packet
-import wirelessNetworkSimulator.Simulateur as s
-import wirelessNetworkSimulator.RoundRobin as m
-import wirelessNetworkSimulator.MaxSNR as msnr
-import wirelessNetworkSimulator.Scheduler as sch
+import wirelessNetworkSimulator.core.Simulateur as s
+import wirelessNetworkSimulator.core.scheduler.Scheduler as sch
 class Antenne:
     @staticmethod
     def getScheduler(scheduler):

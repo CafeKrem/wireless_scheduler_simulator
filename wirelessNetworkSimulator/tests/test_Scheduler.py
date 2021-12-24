@@ -1,8 +1,6 @@
-import unittest
-from abc import abstractmethod, ABC, ABCMeta
+from abc import abstractmethod
 from unittest import TestCase
-from wirelessNetworkSimulator.Mobile import Mobile
-from wirelessNetworkSimulator.Scheduler import Scheduler
+from wirelessNetworkSimulator.core.Mobile import Mobile
 
 
 class TestScheduler(TestCase):

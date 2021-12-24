@@ -1,4 +1,4 @@
-from wirelessNetworkSimulator.MaxSNR import MaxSNR
+from wirelessNetworkSimulator.core.scheduler.MaxSNR import MaxSNR
 from wirelessNetworkSimulator.tests.test_Scheduler import TestScheduler
 
 class TestMaxSNR(TestScheduler):

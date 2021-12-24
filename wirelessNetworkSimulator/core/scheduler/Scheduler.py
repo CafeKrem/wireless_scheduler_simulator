@@ -1,7 +1,7 @@
 import abc
 
 # @abc.abstractClass
-from wirelessNetworkSimulator.Mobile import Mobile
+from wirelessNetworkSimulator.core.Mobile import Mobile
 from abc import ABCMeta
 
 

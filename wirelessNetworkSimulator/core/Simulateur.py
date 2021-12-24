@@ -8,8 +8,8 @@ import logging
 
 
 if TYPE_CHECKING:
-    import wirelessNetworkSimulator.Antenne as a
-    import wirelessNetworkSimulator.Mobile as m
+    import wirelessNetworkSimulator.core.Antenne as a
+    import wirelessNetworkSimulator.core.Mobile as m
 
 
 
