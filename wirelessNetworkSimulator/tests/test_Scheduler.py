@@ -1,22 +1,22 @@
-from abc import abstractmethod
+import unittest
+from abc import abstractmethod, ABC, ABCMeta
 from unittest import TestCase
 from wirelessNetworkSimulator.Mobile import Mobile
 from wirelessNetworkSimulator.Scheduler import Scheduler
 
 
-class TestScheduler(Scheduler, TestCase):
+class TestScheduler(TestCase):
     NB_UR = 32
     TAILLE_PACKET = 40
 
     def setUp(self) -> None:
-        super(TestScheduler, self).setUp()
         self.scheduler = self.newScheduler()
     """
     :return: return a new scheduler
     """
     @abstractmethod
     def newScheduler(self):
-        pass
+        raise NotImplementedError
     def test_allocate_ur(self):
         mobilesMkn = {}
         scheduledTable = self.scheduler.allocateUR(mobilesMkn, self.NB_UR)

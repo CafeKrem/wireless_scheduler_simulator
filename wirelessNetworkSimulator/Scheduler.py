@@ -1,11 +1,12 @@
 import abc
 
-
-#@abc.abstractClass
+# @abc.abstractClass
 from wirelessNetworkSimulator.Mobile import Mobile
+from abc import ABCMeta
 
 
-class Scheduler:
+class Scheduler(abc.ABC):
+    __metaclass__ = ABCMeta
     """
     cette méthode s'occupe d'allouer les unités de ressource au mobile en fonction du type de scheduler
     :param: #antenne ()
@@ -13,6 +14,7 @@ class Scheduler:
     :param: #snrmap=mapMobileMkn(tableau de mkn (taille 128))
     :param: #mapUniteRessource
     """
+
     def allocateUR(self, mapMobileMkn, longueurUR):
         data = [None for x in range(longueurUR)]
         dictBitsNeededMobile = {m: m.bitsNeeded for m in mapMobileMkn.keys()}
@@ -34,6 +36,7 @@ class Scheduler:
     :return: return a tuple of Mobile and allocated Mkn
     :rtype: (Mobile, int)
     """
+
     @abc.abstractmethod
-    def findMaxOfIndice(self,mapMobileMkn,index) -> (Mobile,int):
+    def findMaxOfIndice(self, mapMobileMkn, index) -> (Mobile, int):
         pass

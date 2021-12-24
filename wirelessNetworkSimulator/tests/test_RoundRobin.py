@@ -6,7 +6,7 @@ class TestRoundRobin(scheduler.TestScheduler):
 
     def newScheduler(self):
         return RoundRobin()
-    def test_allocate_ur(self):
+    def test_allocate_ur_rr(self):
         nb_ur = 4
         packet_Size = 1000
         mobileProche = self.createMobile("Proche", 0, 0, nb_ur)

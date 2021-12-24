@@ -4,9 +4,9 @@ from wirelessNetworkSimulator.pf import pf
 
 class Testpf(scheduler.TestScheduler):
 
-    def newScheduler(cls):
+    def newScheduler(self):
         return pf()
-    def test_allocate_ur(self):
+    def test_allocate_ur_pf(self):
         nb_ur = 4
         packet_Size = 1000
         mobileProche = self.createMobile("Proche", 0, 0, nb_ur)

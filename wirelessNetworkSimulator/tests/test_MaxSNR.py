@@ -2,7 +2,8 @@ from wirelessNetworkSimulator.MaxSNR import MaxSNR
 from wirelessNetworkSimulator.tests.test_Scheduler import TestScheduler
 
 class TestMaxSNR(TestScheduler):
-
+    def newScheduler(self):
+        return MaxSNR()
     def test_allocate_ur_MaxSNR(self):
         nb_ur = 4
         packet_Size = 1000
@@ -21,5 +22,3 @@ class TestMaxSNR(TestScheduler):
         self.assertEqual(list(map(lambda x: x[0].name, table)), [mobileProche.name , mobileLoin.name , mobileLoin.name , mobileProche.name])
         self.assertEqual(list(map(lambda x: x[1],table)), [10,7,7,7])
 
-    def newScheduler(self):
-        return MaxSNR()
